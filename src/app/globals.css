@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Dark theme base */
+* {
+  margin: p-0;
+  padding: p-0;
+  box-sizing: border-box;
+}
+
+.main-content > * {
+  text-align: center;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html, body {
+  background: #0a0a0f;
+  color: white;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Glass morphism effects */
+.glass-container {
+  position: relative;
+  background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.glass-container::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.1), rgba(30, 41, 59, 0.1));
+  backdrop-filter: blur(2px);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #ff8c00 0%, #ffd700 65%, #f76d11 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Floating dots background */
+.floating-dots {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Button hover effects */
+.glow-button:hover {
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+}
