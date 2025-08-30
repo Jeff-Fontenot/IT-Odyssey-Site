@@ -11,21 +11,18 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 export const metadata: Metadata = {
-  title: "Jeff Fontenot's Resume",
-  description: "Next Gen Cloud resume created with Next.js, Tailwind CSS, and TypeScript.",
+  title: "ITOdyssey.IO",
+  description: "Landing page for future development of the IT Odyssey brand.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
